@@ -1,2 +1,2 @@
 # Mortar
- Native JS API built on top of Skript
+ 🧱 AST-to-Skript converter
