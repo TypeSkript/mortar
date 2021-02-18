@@ -1,6 +1,6 @@
 import Literal, { LiteralType } from "../lang/Literal";
 
-export default class NumberLiteral extends Literal<boolean> {
+export default class BooleanLiteral extends Literal<boolean> {
     constructor(bool: boolean) {
         super(LiteralType.BOOLEAN, bool);
     }
