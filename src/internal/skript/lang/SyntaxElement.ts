@@ -4,12 +4,18 @@
  */
 export default abstract class SyntaxElement {
 
+    private children: SyntaxElement[] = [];
+
     /**
      * @param parent The parent syntax element, none if no parent or if global (ie. event trigger/ command)
      */
-    constructor(private parent?: SyntaxElement) {
-
+    constructor(private parent?: SyntaxElement, children?: SyntaxElement[]) {
+        if (children) this.children = children;
     }
+
+    public addChild = (child: SyntaxElement) => this.children.push(child);
+
+    public getChildren = () => this.children;
 
     /**
      * @method getValue Generates the Skript equivalent code.
