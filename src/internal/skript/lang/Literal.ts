@@ -1,3 +1,5 @@
+import SyntaxElement from "./SyntaxElement";
+
 /**
  * Some types of data in Skript can be represented exactly as typed.
  * These data types are called literals, because they literally mean
@@ -13,7 +15,7 @@
  * @template T The JS/JSON equivalent of the literal, as it would be
  * represented in the AST.
  */
-export default abstract class Literal<T> {
+export default abstract class Literal<T> extends SyntaxElement {
     private type: LiteralType;
     private value: T;
 
@@ -21,7 +23,8 @@ export default abstract class Literal<T> {
      * @param type The type of literal. (Number, String, Boolean, or Material)
      * @param value The value of the literal.
      */
-    constructor(type: LiteralType, value: T) {
+    constructor(type: LiteralType, value: T, parent: SyntaxElement) {
+        super(parent);
         this.type = type;
         this.value = value;
     }
@@ -35,11 +38,6 @@ export default abstract class Literal<T> {
      * @method getType Returns the type of the literal (Number, String, Boolean, or Material).
      */
     getType = (): LiteralType => this.type;
-
-    /**
-     * @method getValue Generates the Skript equivalent code.
-     */
-    public abstract generate(): string;
 }
 
 export enum LiteralType {
