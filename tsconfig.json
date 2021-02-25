@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "target": "ES5",
+        "module": "CommonJS",
+        "lib": ["ESNext"],
+        "declaration": true,
+        "outDir": "dist",
+        "rootDir": "lib",
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "experimentalDecorators": true
+    }
+}
