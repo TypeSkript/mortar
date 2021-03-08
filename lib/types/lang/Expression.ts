@@ -1,4 +1,4 @@
-import ExpressionParameter from "./ExpressionParameter";
+import Parameter from "./Parameter";
 
 /**
  * Used in case an expression has multiple patterns that mean different things, i.e. size of %objects% vs. recursive size of %objects%.
@@ -10,5 +10,5 @@ export default interface Expression {
   type: 'Expression',
   name: string, // PLACEHOLDER
   pattern?: ExpressionPatternIndex,
-  parameters: ExpressionParameter[]
+  parameters: Parameter[]
 }

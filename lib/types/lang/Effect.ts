@@ -1,4 +1,4 @@
-import EffectParameter from "./EffectParameter";
+import Parameter from "./Parameter";
 
 /**
  * Used in case an effect has multiple patterns that mean different things, i.e. ban %players% vs. ban %players% by IP
@@ -10,5 +10,5 @@ export default interface Effect {
   type: 'Effect',
   name: string, // PLACEHOLDER
   pattern?: EffectPatternIndex,
-  parameters: EffectParameter[]
+  parameters: Parameter[]
 }
