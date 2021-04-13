@@ -12,7 +12,6 @@ export type TypePattern = string; // PLACEHOLDER
 export type TypeValue = Expression | Variable | TypePattern;
 
 export default interface Type {
-  type: 'Type',
-  name: string, // PLACEHOLDER
-  value: TypeValue
+    type: 'Type',
+    value: TypeValue
 }

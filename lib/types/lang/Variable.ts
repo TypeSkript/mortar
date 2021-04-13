@@ -1,4 +1,4 @@
 export default interface Variable {
-  type: 'Variable',
-  name: string
+    type: 'Variable',
+    name: string
 }

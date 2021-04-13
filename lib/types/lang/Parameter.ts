@@ -6,7 +6,7 @@ import Type from "./Type";
 export type ParameterIndex = number;
 
 export default interface Parameter {
-  type: 'Parameter',
-  parameter: ParameterIndex,
-  value: Type
+    type: 'Parameter',
+    parameter: ParameterIndex,
+    value: Type
 }
